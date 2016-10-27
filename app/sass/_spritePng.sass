@@ -1,0 +1,138 @@
+/*
+  SASS variables are information about icon's compiled state, stored under its original file name
+
+  .icon-home
+    width: $icon-home-width
+
+  The large array-like variables contain all information about a single icon
+  $icon-home: x y offset_x offset_y width height total_width total_height image_path
+
+  At the bottom of this section, we provide information about the spritesheet itself
+  $spritesheet: width height image $spritesheet-sprites
+  */
+$back-link-spare-name: 'backLinkSpare'
+$back-link-spare-x: 0px
+$back-link-spare-y: 0px
+$back-link-spare-offset-x: 0px
+$back-link-spare-offset-y: 0px
+$back-link-spare-width: 648px
+$back-link-spare-height: 217px
+$back-link-spare-total-width: 1036px
+$back-link-spare-total-height: 572px
+$back-link-spare-image: '../../images/icons/sprite.png'
+$back-link-spare: (0px, 0px, 0px, 0px, 648px, 217px, 1036px, 572px, '../../images/icons/sprite.png', 'backLinkSpare', )
+$back-yellow2-name: 'backYellow2'
+$back-yellow2-x: 0px
+$back-yellow2-y: 217px
+$back-yellow2-offset-x: 0px
+$back-yellow2-offset-y: -217px
+$back-yellow2-width: 388px
+$back-yellow2-height: 217px
+$back-yellow2-total-width: 1036px
+$back-yellow2-total-height: 572px
+$back-yellow2-image: '../../images/icons/sprite.png'
+$back-yellow2: (0px, 217px, 0px, -217px, 388px, 217px, 1036px, 572px, '../../images/icons/sprite.png', 'backYellow2', )
+$back-yellow-call-back-name: 'backYellowCallBack'
+$back-yellow-call-back-x: 648px
+$back-yellow-call-back-y: 0px
+$back-yellow-call-back-offset-x: -648px
+$back-yellow-call-back-offset-y: 0px
+$back-yellow-call-back-width: 388px
+$back-yellow-call-back-height: 217px
+$back-yellow-call-back-total-width: 1036px
+$back-yellow-call-back-total-height: 572px
+$back-yellow-call-back-image: '../../images/icons/sprite.png'
+$back-yellow-call-back: (648px, 0px, -648px, 0px, 388px, 217px, 1036px, 572px, '../../images/icons/sprite.png', 'backYellowCallBack', )
+$backlogo2-name: 'backlogo2'
+$backlogo2-x: 0px
+$backlogo2-y: 434px
+$backlogo2-offset-x: 0px
+$backlogo2-offset-y: -434px
+$backlogo2-width: 431px
+$backlogo2-height: 138px
+$backlogo2-total-width: 1036px
+$backlogo2-total-height: 572px
+$backlogo2-image: '../../images/icons/sprite.png'
+$backlogo2: (0px, 434px, 0px, -434px, 431px, 138px, 1036px, 572px, '../../images/icons/sprite.png', 'backlogo2', )
+$btn-yellow1-name: 'btnYellow1'
+$btn-yellow1-x: 648px
+$btn-yellow1-y: 330px
+$btn-yellow1-offset-x: -648px
+$btn-yellow1-offset-y: -330px
+$btn-yellow1-width: 251px
+$btn-yellow1-height: 57px
+$btn-yellow1-total-width: 1036px
+$btn-yellow1-total-height: 572px
+$btn-yellow1-image: '../../images/icons/sprite.png'
+$btn-yellow1: (648px, 330px, -648px, -330px, 251px, 57px, 1036px, 572px, '../../images/icons/sprite.png', 'btnYellow1', )
+$small-yellow-back-name: 'smallYellowBack'
+$small-yellow-back-x: 648px
+$small-yellow-back-y: 217px
+$small-yellow-back-offset-x: -648px
+$small-yellow-back-offset-y: -217px
+$small-yellow-back-width: 244px
+$small-yellow-back-height: 113px
+$small-yellow-back-total-width: 1036px
+$small-yellow-back-total-height: 572px
+$small-yellow-back-image: '../../images/icons/sprite.png'
+$small-yellow-back: (648px, 217px, -648px, -217px, 244px, 113px, 1036px, 572px, '../../images/icons/sprite.png', 'smallYellowBack', )
+$spritesheet-width: 1036px
+$spritesheet-height: 572px
+$spritesheet-image: '../../images/icons/sprite.png'
+$spritesheet-sprites: ($back-link-spare, $back-yellow2, $back-yellow-call-back, $backlogo2, $btn-yellow1, $small-yellow-back, )
+$spritesheet: (1036px, 572px, '../../images/icons/sprite.png', $spritesheet-sprites, )
+
+/*
+  The provided mixins are intended to be used with the array-like variables
+
+  .icon-home
+    @include sprite-width($icon-home)
+
+  .icon-email
+    @include sprite($icon-email)
+
+  Example usage in HTML:
+    `display: block` sprite:
+    <div class="icon-home"></div>
+
+  To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+    // CSS
+    .icon {
+      display: inline-block;
+    }
+
+    // HTML
+    <i class="icon icon-home"></i>
+  */
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+/*
+  The `sprites` mixin generates identical output to the CSS template
+    but can be overridden inside of SASS
+
+  @include sprites($spritesheet-sprites)
+  */
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

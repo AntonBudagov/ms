@@ -1,0 +1,52 @@
+//- mixins
+include ../includes/header
+include ../includes/sectionOne
+include ../includes/sectionTwo
+include ../includes/leftSidbar
+//-
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(content='', name='keywords')
+    meta(content='', name='description')
+    meta(content='width=device-width, initial-scale=1, user-scalable=no' name='viewport')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='theme-color', content='#11131a')
+    meta(content='#fff', name='msapplication-TileColor')
+    meta(content='#fff', name='theme-color')
+    //- ========================================================================
+    //- Vendor css
+    //- ========================================================================
+    link(rel='stylesheet', href='http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css')
+    //- link(rel='stylesheet', href='lib/foundation/foundation.min.css')
+    link(rel='stylesheet' href='lib/owl.carousel/dist/assets/owl.carousel.min.css')
+    //- ========================================================================
+    //- Main css
+    //- ========================================================================
+    link(rel='stylesheet' href='css/main.css')
+
+    block title
+
+  body
+    .off-canvas-wrapper
+      .off-canvas-wrapper-inner(data-off-canvas-wrapper='')
+        #my-info.off-canvas.position-left.reveal-for-large(data-off-canvas='', data-position='left')
+          +leftSidbar
+        block content
+
+    //- Vendor js============================
+    //- script(type="text/javascript" src="lib/jquery/dist/jquery.min.js")
+    script(src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(src='http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js')
+    script.
+      $(document).foundation();
+    script(src="lib/owl.carousel/dist/owl.carousel.min.js")
+    script(src="lib/materialize/js/velocity.min.js")
+    script(src="lib/materialize/js/leanModal.js")
+    //- Main Js
+    script(src="js/main.js")
+    noscript(style="body {padding: 0;margin: 0;font-size: 28px;text-align: center;line-height: 100vh;}body::after {content:'Please enable JavaScript in your browser to view this site.';}")
+
+
+

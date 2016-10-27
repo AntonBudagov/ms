@@ -1,0 +1,143 @@
+#logo
+  text-decoration: none
+  display: block
+  height: 138px
+  padding-top: 37px
+  .logoWrapp
+    span
+      color: white
+      text-align: center
+      display: block
+      &:first-child
+        font-size: 20px
+        font-weight: 700
+        line-height: 27px
+        text-transform: uppercase
+      &:last-child
+        font-size: 15px
+        font-weight: 300
+        line-height: 21px
+    .subtitle
+      position: relative
+      text-align: center
+      span
+        position: absolute
+        left: 0
+        right: 0
+        top: 9px
+        z-index: 2
+        letter-spacing: 1px
+
+
+// Fundation--------------------------------------------------------
+.off-canvas.position-left
+  left: -315px
+  width: 315px
+.off-canvas
+  background-color: #11131a
+  z-index: 2
+
+.is-open-left
+  transform: translateX(315px)
+
+@media screen and (min-width: 64em)
+  .position-left.reveal-for-large
+    left: 0
+  .position-left.reveal-for-large~.off-canvas-content
+    margin-left: 315px
+// Fundation--------------------------------------------------------
+#leftMenu
+  width: 100%
+  margin: 0 auto
+  color: white
+  position: relative
+
+
+  h3
+    margin: 15px 0
+    a
+      text-decoration: none
+      color: #fff
+      font-family: $defaultFont
+      font-size: 18px
+      font-weight: 700
+      line-height: 21px
+      padding: 0 20px 0 41px
+
+    &:hover
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.7)
+  ul ul ul
+    margin-left: 15px
+
+  li
+    list-style-type: none
+
+  ul ul li a, h4
+    color: $brendBlue
+    text-decoration: none
+    font-size: 16px
+    font-weight: 300
+    line-height: 38px
+    display: block
+    padding: 0 20px 0 54px
+    transition: all .35s
+    position: relative
+  ul ul
+    display: none
+    margin: 0
+    li a:hover
+      background-color: #1e202c;
+      color: $brendYellow
+
+
+  li.active > ul
+    display: block
+
+  a:not(:only-child):after
+    content: ''
+    // +sprite($arrow-down-black)
+    // transform: rotate(-90deg)
+    position: absolute
+    display: block
+    right: 20px
+    top: 0
+    bottom: 0
+    margin: auto
+  .active > a:not(:only-child):after
+    transform: rotate(-90deg)
+    content: ''
+    // +sprite($arrow-down-black)
+
+  .dropDown
+    position: relative
+    &:after
+      content: ''
+      // +sprite($arrow-down-black)
+      position: absolute
+      top: 0
+      margin-top: 14px
+      right: 20px
+    &.active
+      &:after
+        content: ''
+        transform: rotate(-90deg)
+        // +sprite($arrow-down-black)
+
+.feedbackForm
+  height: 275px
+  width: 100%
+  background-color: #0b0c11
+  padding: 38px 0 0 0
+  text-align: center
+  h3
+    text-align: center
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 21px;
+    text-transform: uppercase;
+  .groupInput
+    display: inline-block
+    max-width: 251px
+    width: 100%
+    margin: 34px auto 27px

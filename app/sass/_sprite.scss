@@ -1,0 +1,137 @@
+.icon {
+    font-size: 30px;
+    &:before {
+      content:' ';
+      vertical-align:middle;
+      display: inline-block;
+      background-image: url("../svg/sprite.svg");
+      background-repeat: no-repeat;
+      background-size: 8.666666666666666em 19.133333333333333em;
+
+      .no-svg & {
+        background-image: url("../svg/sprite.png");
+      }
+    }
+}
+
+
+
+
+.icon.back-logo {
+  &:before {
+      background-position: -0.16666666666666666em -0.16666666666666666em;
+      width: 8.333333333333334em;
+      height: 1.1em;
+    }
+  }
+
+  @mixin icon-back-logo(){
+    @extend .back-logo;
+  }
+
+
+.icon.m-arrow-around {
+  &:before {
+      background-position: -0.16666666666666666em -1.6em;
+      width: 0.7em;
+      height: 0.7em;
+    }
+  }
+
+  @mixin icon-m-arrow-around(){
+    @extend .m-arrow-around;
+  }
+
+
+.icon.m-arrow-small-next {
+  &:before {
+      background-position: -0.16666666666666666em -2.6333333333333333em;
+      width: 0.3333333333333333em;
+      height: 0.26666666666666666em;
+    }
+  }
+
+  @mixin icon-m-arrow-small-next(){
+    @extend .m-arrow-small-next;
+  }
+
+
+.icon.m-next {
+  &:before {
+      background-position: -0.16666666666666666em -3.2333333333333334em;
+      width: 0.5333333333333333em;
+      height: 0.9em;
+    }
+  }
+
+  @mixin icon-m-next(){
+    @extend .m-next;
+  }
+
+
+.icon.m-phone {
+  &:before {
+      background-position: -0.16666666666666666em -4.466666666666667em;
+      width: 0.4em;
+      height: 0.6666666666666666em;
+    }
+  }
+
+  @mixin icon-m-phone(){
+    @extend .m-phone;
+  }
+
+
+.icon.m-photoparat {
+  &:before {
+      background-position: -0.16666666666666666em -5.466666666666667em;
+      width: 5.366666666666666em;
+      height: 4.7em;
+    }
+  }
+
+  @mixin icon-m-photoparat(){
+    @extend .m-photoparat;
+  }
+
+
+.icon.m-prev {
+  &:before {
+      background-position: -0.16666666666666666em -10.5em;
+      width: 0.5333333333333333em;
+      height: 0.9em;
+    }
+  }
+
+  @mixin icon-m-prev(){
+    @extend .m-prev;
+  }
+
+
+.icon.m-scrollDown {
+  &:before {
+      background-position: -0.16666666666666666em -11.733333333333333em;
+      width: 0.8666666666666667em;
+      height: 1.3333333333333333em;
+    }
+  }
+
+  @mixin icon-m-scrollDown(){
+    @extend .m-scrollDown;
+  }
+
+
+.icon.m-square {
+  &:before {
+      background-position: -0.16666666666666666em -13.399999999999999em;
+      width: 5.1em;
+      height: 5.566666666666666em;
+    }
+  }
+
+  @mixin icon-m-square(){
+    @extend .m-square;
+  }
+
+
+

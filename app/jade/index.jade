@@ -1,0 +1,80 @@
+extends templates/template
+block title
+    title Page Index
+block content
+
+  .off-canvas-content(data-off-canvas-content='')
+
+    .title-bar.hide-for-large
+      .title-bar-left
+        button.menu-icon(type='button', data-open='my-info')
+        span.title-bar-title Moston detailing
+
+    .row.column
+      +sectionOne
+      +sectionTwo
+    .row.small-up-2.medium-up-3.large-up-4
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+      .column
+        img.thumbnail(src='http://placehold.it/550x550')
+        h5 My Site
+    hr
+    .row
+      .medium-6.columns
+        h3 Contact Me
+        p
+          | Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor.
+        ul.menu
+          li
+            a(href='#') Dribbble
+          li
+            a(href='#') Facebook
+          li
+            a(href='#') Yo
+      .medium-6.columns
+        label
+          | Name
+          input(type='text', placeholder='Name')
+        label
+          | Email
+          input(type='text', placeholder='Email')
+        label
+          | Message
+          textarea(placeholder='holla at a designerd')
+        input.button.expanded(type='submit', value='Submit')
+
+
+ //- .wrappContent
+    //- +sectionOne
