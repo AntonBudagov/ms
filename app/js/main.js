@@ -35,14 +35,65 @@
 
 
 var sliderNews = {
-      nav : true,
-      items: 3,
-      dots: false,
-      center: false,
-      mouseDrag: true
-    };
+    margin:0,
+    responsiveClass:true,
+    responsive:{
+      0:{
+        items:1,
+        nav:false,
+        loop:true,
+        dots:true
+      },
+      768:{
+          items:1,
+          nav:false,
+          loop:true,
+          dots:true,
+      },
+      1000:{
+          items:2,
+          loop:true,
+          nav:false
+      },
+      1200:{
+          items:3,
+          loop:false,
+          nav:true,
+          dots:false
+      }
+    }
+  };
     $('#sliderNews').owlCarousel(sliderNews);
 
-
+var instagramPhoto = {
+    margin:0,
+    responsiveClass:true,
+    responsive:{
+      0:{
+        items:1,
+        nav:false,
+        loop:true,
+        dots:true
+      },
+      768:{
+        items:1,
+        nav:false,
+        loop:true,
+        dots:true,
+      },
+      1000:{
+        items:3,
+        loop:true,
+        nav:false
+      },
+      1200:{
+        items:4,
+        loop:false,
+        nav:true,
+        dots:false
+      }
+    }
+  };
+  $('#instagramPhoto').owlCarousel(instagramPhoto);
 
 })(window);

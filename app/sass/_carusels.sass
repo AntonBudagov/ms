@@ -1,3 +1,4 @@
+@import _sprite
 .owl-nav
   position: absolute
   top: 50%
@@ -6,53 +7,57 @@
     font-size: 0
     line-height: 0
     position: absolute
-    display: block
     width: 50px
     height: 50px
     margin-top: -25px
     padding: 0
-    cursor: pointer
     color: transparent
     border: none
     outline: none
     background-color: #11131a
     background-repeat: no-repeat
-    display: inline-block
     background-position: 50% 50%
     transition: all .35s
     border-radius: 50%
-  .owl-prev
-    left: 0
-    // +sprite($le-prew)
-    background-image: url(../images/icons/sprite.png)
-    // background-position: -284px -14px
-    // width: 10px
-    // height: 17px
-    display: table
     &:before
-      content: ''
-      position: absolute
+      display: table;
+      background-image: url(../svg/sprite.svg);
+      content: '';
+      position: absolute;
+      font-size: 30px;
+      top: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      bottom: 0;
+      background-size: 8.666666666666666em 19.133333333333333em;
     &:hover
-      // transform: translateX(5px)
+      background-color: #fdc251
+      box-shadow: 0 0 15px #fdc251
     &.disabled
       opacity: .5
-  .owl-next
-    // +sprite($le-next)
-    right: 0
-    background-image: url(../images/icons/sprite.png)
-    // background-position: -274px -14px
-    // width: 10px
-    // height: 17px
+      &:hover
+       background-color: #11131a
+       box-shadow: 0 0 0
 
-    display: table
+  .owl-prev
+    left: 19px
     &:before
-      content: ''
-      position: absolute
-    // background-image: url(../images/icons/next.svg)
+      background-position: -0.16666666666666666em -10.5em;
+      width: 0.5333333333333333em;
+      height: 0.9em
     &:hover
-      // transform: translateX(-5px)
-    &.disabled
-      opacity: .5
+      transform: translateX(8px)
+
+  .owl-next
+    right: 19px
+    &:before
+      background-position: -0.16666666666666666em -3.2333333333333334em;
+      width: 0.5333333333333333em;
+      height: 0.9em;
+    &:hover
+      transform: translateX(-8px)
+
 
 
 .owl-controls, .owl-nav

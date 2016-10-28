@@ -1,10 +1,10 @@
 mixin sectionTwo
   .sectionTwo
-    h2.brendtitleNews
-      | Новые работы
-      //- i.icon.m-square
-    .wrappContent
-      #sliderNews.owl-carousel
+    .wrappContent.caruselCar
+      h2.brendtitleNews
+        | Новые работы
+        //- i.icon.m-square
+      #sliderNews.sliderNews.owl-carousel
         .sliderNewsItem
           .wrappImg
             img(src="images/caruselCar/slide1.jpg", alt="car" title="big car")
@@ -48,6 +48,34 @@ mixin sectionTwo
             h3  BMW 528i
             p Тонировка задней части 5% перед 35% лобовое атермальной плёнкой.
             a.brendBtnMore.btn(href="#") Подробней
+
+
+    .wrappContent.caruselCar
+      h2.brendtitleInstagram
+        | Больше новых работ в нашем инстаграмм
+        //- i.icon.m-square
+      .subscribe
+        .btnSubscribe Подпишитесь
+        lable.subText и будьте в курсе!
+      #instagramPhoto.owl-carousel
+        .sliderNewsItem
+          a.wrappImg(href="#")
+            img(src="images/instagramPhoto/photo1.jpg", alt="car" title="big car")
+        .sliderNewsItem
+          .wrappImg
+            img(src="images/instagramPhoto/photo2.jpg", alt="car" title="big car")
+        .sliderNewsItem
+          .wrappImg
+            img(src="images/instagramPhoto/photo3.jpg", alt="car" title="big car")
+        .sliderNewsItem
+          .wrappImg
+            img(src="images/instagramPhoto/photo4.jpg", alt="car" title="big car")
+        .sliderNewsItem
+          .wrappImg
+            img(src="images/instagramPhoto/photo1.jpg", alt="car" title="big car")
+        .sliderNewsItem
+          .wrappImg
+            img(src="images/instagramPhoto/photo2.jpg", alt="car" title="big car")
 
 
 

@@ -1,10 +1,13 @@
 .sectionTwo
-  padding-top: 155px
   text-align: center
   background-color: #11131a
-  .brendtitleNews
+  .caruselCar
+    padding-bottom: 19px
+    padding-top: 155px
+  .brendtitleNews, .brendtitleInstagram
     min-height: 167px
     height: 100%
+    margin: 0 auto
     &:before
       left: 0
       right: 0
@@ -22,6 +25,28 @@
       background-position: -0.16666666666666666em -13.399999999999999em;
       width: 5.1em;
       height: 5.566666666666666em;
+  .brendtitleInstagram
+    max-width: 1210px
+    &:before
+      background-position: -0.16666666666666666em -5.466666666666667em;
+      width: 5.366666666666666em;
+      height: 4.7em
+  .subscribe
+    margin-bottom: 59px
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+  .subText
+    color: white
+    font-family: $brendFontlight
+    font-size: 25px
+    font-weight: 900
+    line-height: 49px
+    text-transform: uppercase
+    padding-left: 14px
+
 
 #sliderNews
   max-width: 1610px
@@ -56,5 +81,15 @@
         font-weight: 300;
         line-height: 22px;
         margin-bottom: 23px
+
+#instagramPhoto
+  .sliderNewsItem
+    max-width: 400px
+    max-height: 400px
+    width: 400px
+    height: 400px
+
+
+
 
 
